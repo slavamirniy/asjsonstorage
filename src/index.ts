@@ -134,7 +134,7 @@ export class AsJSONFilesTaskSystemStorage implements IWorkflowStorage<any>, IAct
                 additionalData: data.additionalData
             };
         } else {
-            existing.activities[data.activityId].additionalData = data.additionalData;
+            existing.activities[data.activityId]!.additionalData = data.additionalData;
         }
         await this.writeWorkflowFile(data.workflowName, data.workflowId, existing);
     }
