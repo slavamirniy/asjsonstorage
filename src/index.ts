@@ -59,7 +59,11 @@ export class AsJSONFilesTaskSystemStorage implements IWorkflowStorage<any>, IAct
                 if (!data.result) {
                     const parts = file.split('_');
                     const workflowId = parts[parts.length - 1];
-                    results.push(workflowId.replace('.json', ''));
+                    if (workflowId) {
+                        results.push(workflowId.replace('.json', ''));
+                    } else {
+                        throw new Error(`Workflow ID is not found in file ${file}`);
+                    }
                 }
             } catch (err) {
                 console.error(`Error reading file ${file}:`, err);
