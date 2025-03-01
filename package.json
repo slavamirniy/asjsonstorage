@@ -1,0 +1,28 @@
+{
+  "name": "asjsonstorage",
+  "version": "1.0.0",
+  "description": "A JSON storage for activities and workflows for YATS.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "json",
+    "storage",
+    "activities",
+    "workflows",
+    "yats"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.13.5",
+    "task-system-package": "github:slavamirniy/yats"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.64.7",
+    "typescript": "^5.3.3"
+  }
+}
